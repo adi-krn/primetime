@@ -17,7 +17,7 @@ const productSchema = new mongoose.Schema(
       },
     ],
 
-    lowestPrice: {type: Number},
+    lowestPrice: { type: Number },
     highestPrice: { type: Number },
     averagePrice: { type: Number },
     discountRate: { type: Number },
@@ -31,6 +31,7 @@ const productSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const Product = mongoose.models.Product  || mongoose.model('Product',productSchema);
+const Product =
+  mongoose.models.Product || mongoose.model("Product", productSchema);
 
 export default Product;

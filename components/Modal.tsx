@@ -2,6 +2,7 @@
 
 import { FormEvent, Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import { addUserEmailToProduct } from "@/lib/actions";
 
 interface Props{
   productId : string
@@ -19,7 +20,7 @@ const Modal = ({productId}: Props) => {
     setisSubmitting(true);
 
 
-    //await addUserEmailtoProduct{productId, email};
+    await addUserEmailToProduct(productId, email);
 
     setisSubmitting(false);
     setEmail('');
