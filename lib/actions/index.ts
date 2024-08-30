@@ -117,5 +117,7 @@ export async function addUserEmailToProduct(
 
       await sendEmail(emailContent, [userEmail]);
     }
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
 }
